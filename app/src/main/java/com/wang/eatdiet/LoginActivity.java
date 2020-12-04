@@ -13,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Bundle;
 
+import java.security.ProtectionDomain;
+
 public class LoginActivity extends AppCompatActivity {
 
     ImageView imageView;
@@ -71,6 +73,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(isSignUpSuccess())
                 {
+                    // TODO: 2020/12/4 传递用户数据待补充
                     Intent intent=new Intent(LoginActivity.this,MainActivity.class);
                     startActivity(intent);
                 }
@@ -81,6 +84,7 @@ public class LoginActivity extends AppCompatActivity {
         sign_in_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //点击注册按钮跳转注册页面
                 Intent intent=new Intent(LoginActivity.this,RegisterActivity.class);
                 startActivity(intent);
             }
@@ -88,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
         forget_password_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: 2020/12/4 检查忘记密码按钮点击字段待补充 
+                // TODO: 2020/12/4 检查忘记密码按钮点击字段待补充
                 Toast.makeText(LoginActivity.this,"忘记密码",Toast.LENGTH_SHORT).show();
                    Log.d("LoginActivity", "onClick: conn failed");
 
