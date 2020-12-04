@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
-        imageView = findViewById(R.id.imageView);
+        imageView = findViewById(R.id.imageView_login);
         textView = findViewById(R.id.textView);
         imageView.setOnTouchListener(new OnSwipeTouchListener(getApplicationContext()) {
             public void onSwipeTop() {
@@ -93,8 +93,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO: 2020/12/4 检查忘记密码按钮点击字段待补充
-                Toast.makeText(LoginActivity.this,"忘记密码",Toast.LENGTH_SHORT).show();
-                   Log.d("LoginActivity", "onClick: conn failed");
+                Intent intent=new Intent(LoginActivity.this,ResetPasswordActivity.class);
+                startActivity(intent);
 
             }
         });
