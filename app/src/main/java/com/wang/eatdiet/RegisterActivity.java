@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import com.wang.eatdiet.Util.Phone;
 import com.google.android.material.textfield.TextInputLayout;
 
 import org.angmarch.views.NiceSpinner;
@@ -49,13 +49,6 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     }
-    public static boolean isPhone(String inputText)
-    {
-
-        Pattern p= Pattern.compile("^((14[0-9])|(13[0-9])|(15[0-9])|(18[0-9])|(17[0-9]))\\d{8}$");
-        Matcher m=p.matcher(inputText);
-        return m.matches();
-    }
     private boolean isRegisterSuccess()//判断输入字段
     {
         String register_phone_text,register_password_text,register_repassword_text;
@@ -67,8 +60,8 @@ public class RegisterActivity extends AppCompatActivity {
         register_repassword_text=register_repassword.getText().toString().trim();
         Log.d("isRegisterSuccess", "\nphone="+register_phone_text+"\npassword="
                 +register_password_text+"\nrepassword="
-                +register_repassword_text+"\nisphone()="+isPhone(register_phone_text));
-        if((register_password_text.equals(register_repassword_text))&&isPhone(register_phone_text))
+                +register_repassword_text+"\nisphone()="+Phone.isPhone(register_phone_text));
+        if((register_password_text.equals(register_repassword_text))&&Phone.isPhone(register_phone_text))
             return true;
         else
             return false;

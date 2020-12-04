@@ -42,3 +42,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     implementation 'com.github.arcadefire:nice-spinner:1.4.4'
 }
+apply plugin: 'com.mob.sdk'
+
+MobSDK {
+    appKey "31a8d828cff5d"
+    appSecret "415b5fa0ffcd6b9f554a8722ce67ab49"
+    SMSSDK {}
+}
