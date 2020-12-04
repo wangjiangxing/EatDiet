@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">EatDiet</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="sign_in">注册</string>
+    <string name="sign_up">登录</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="register_phone">请输入电话</string>
+    <string name="register_password">请输入密码</string>
+    <string name="register_repassword">请重新输入密码</string>
+    <string name="register_sex">请选择性别</string>
+    <string-array name="sex">
+        <item>请选择性别</item>
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+</resources>
